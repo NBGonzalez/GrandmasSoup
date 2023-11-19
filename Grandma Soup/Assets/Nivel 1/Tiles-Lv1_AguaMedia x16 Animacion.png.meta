@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 53a8d072688f7cc49ac4fbb57999ffa7
+guid: f79abbbecc94cba47ad6538092caf9f1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tiles-Lv1_Agua x16 Animacion_0
+      name: Tiles-Lv1_AguaMedia x16 Animacion_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7638f34125d167c40b6689226db98e8c
-      internalID: -1411095817
+      spriteID: 3c4ac0ea03fb98a4ea2942c8c43db6ef
+      internalID: 848283469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles-Lv1_Agua x16 Animacion_1
+      name: Tiles-Lv1_AguaMedia x16 Animacion_1
       rect:
         serializedVersion: 2
         x: 16
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5357b3effcc7c77419a7187f94f35774
-      internalID: -868812350
+      spriteID: 644a3f51cdeb563468bcd529ffe88187
+      internalID: 1296494147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles-Lv1_Agua x16 Animacion_2
+      name: Tiles-Lv1_AguaMedia x16 Animacion_2
       rect:
         serializedVersion: 2
         x: 32
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89353bb45dfa00d4f980b8f64ce65137
-      internalID: -50817958
+      spriteID: bc58d34e7c22cc04bb0fe08abbe367c7
+      internalID: -1600648564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles-Lv1_Agua x16 Animacion_3
+      name: Tiles-Lv1_AguaMedia x16 Animacion_3
       rect:
         serializedVersion: 2
         x: 48
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c5ce84bd97d9a145bfb885fde1e98b9
-      internalID: 686053047
+      spriteID: 1be4ad10a962c8a4bbd877c90aaf019b
+      internalID: -1276167904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles-Lv1_Agua x16 Animacion_4
+      name: Tiles-Lv1_AguaMedia x16 Animacion_4
       rect:
         serializedVersion: 2
         x: 64
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e7d69503e8899b4aaa4a781d5cdfff4
-      internalID: 599047536
+      spriteID: e70c8acc32614ff48abb3aea76b5315e
+      internalID: -1291781518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles-Lv1_Agua x16 Animacion_5
+      name: Tiles-Lv1_AguaMedia x16 Animacion_5
       rect:
         serializedVersion: 2
         x: 80
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c57b7c7efac99b148a5ab026be514ee6
-      internalID: -976641368
+      spriteID: 09e1fc53c9d22374c84b5b889990807e
+      internalID: -235513079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles-Lv1_Agua x16 Animacion_6
+      name: Tiles-Lv1_AguaMedia x16 Animacion_6
       rect:
         serializedVersion: 2
         x: 96
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b96f4d2636780114cb4a3ba75d322740
-      internalID: -1263465179
+      spriteID: 683616158085df44bac0f34ba57bd7aa
+      internalID: 1897043899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles-Lv1_Agua x16 Animacion_7
+      name: Tiles-Lv1_AguaMedia x16 Animacion_7
       rect:
         serializedVersion: 2
         x: 112
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3793123a80f3d6a41a28fb7ff868cdb6
-      internalID: 550419141
+      spriteID: 434a36d19fc05e748aa482630e402a65
+      internalID: 936054333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles-Lv1_Agua x16 Animacion_8
+      name: Tiles-Lv1_AguaMedia x16 Animacion_8
       rect:
         serializedVersion: 2
         x: 128
@@ -292,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19291d06bf422774fa9b6b6064eee557
-      internalID: 52680587
+      spriteID: f0576fa8db1f8df42ad387cd60bfb06c
+      internalID: -127263886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles-Lv1_Agua x16 Animacion_9
+      name: Tiles-Lv1_AguaMedia x16 Animacion_9
       rect:
         serializedVersion: 2
         x: 144
@@ -313,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 598ed89fb39993842bcd67a459f673a6
-      internalID: -1053341243
+      spriteID: d4ea37c7b1403b04eb861277124b4acc
+      internalID: -539629371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles-Lv1_Agua x16 Animacion_10
+      name: Tiles-Lv1_AguaMedia x16 Animacion_10
       rect:
         serializedVersion: 2
         x: 0
@@ -334,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b3d0e6e743c66546b416be29e9cfd36
-      internalID: -1963041273
+      spriteID: bc301abf4fd412340b5ac0a4d2cdf588
+      internalID: -1533765842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles-Lv1_Agua x16 Animacion_11
+      name: Tiles-Lv1_AguaMedia x16 Animacion_11
       rect:
         serializedVersion: 2
         x: 16
@@ -355,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59ad609253b4ce04e8eed09e84573fad
-      internalID: 1939577818
+      spriteID: 38faa951018df5a489d184146c081444
+      internalID: -1429783055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles-Lv1_Agua x16 Animacion_12
+      name: Tiles-Lv1_AguaMedia x16 Animacion_12
       rect:
         serializedVersion: 2
         x: 32
@@ -376,14 +376,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6957b7dd1deea0d468ede8cd86e4c1b3
-      internalID: 1289824425
+      spriteID: 2cbc9651ba893524598b03f4407d0037
+      internalID: -329585268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles-Lv1_Agua x16 Animacion_13
+      name: Tiles-Lv1_AguaMedia x16 Animacion_13
       rect:
         serializedVersion: 2
         x: 48
@@ -397,14 +397,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f380abc2d62d3ec4ea7607feaa367aa0
-      internalID: -1880746910
+      spriteID: 7e61b13696a9f414e829e746afce27c1
+      internalID: -789854802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles-Lv1_Agua x16 Animacion_14
+      name: Tiles-Lv1_AguaMedia x16 Animacion_14
       rect:
         serializedVersion: 2
         x: 64
@@ -418,14 +418,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be40c3179b202ee4a841e6b69d164ff3
-      internalID: -726122851
+      spriteID: 5c9024693bb9dac43b785faa6d0d30fc
+      internalID: 156931507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles-Lv1_Agua x16 Animacion_15
+      name: Tiles-Lv1_AguaMedia x16 Animacion_15
       rect:
         serializedVersion: 2
         x: 80
@@ -439,14 +439,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d767a8337d530be44b1988710dc71b14
-      internalID: 50834890
+      spriteID: 9ddc54f3a490fb248925da890fda6c28
+      internalID: 1209096879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles-Lv1_Agua x16 Animacion_16
+      name: Tiles-Lv1_AguaMedia x16 Animacion_16
       rect:
         serializedVersion: 2
         x: 96
@@ -460,8 +460,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d447207386213a49a65f5623ab00020
-      internalID: 1181672202
+      spriteID: f8c385c21810041458d3227a53e015bc
+      internalID: 141352678
       vertices: []
       indices: 
       edges: []
@@ -477,23 +477,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tiles-Lv1_Agua x16 Animacion_0: -1411095817
-      Tiles-Lv1_Agua x16 Animacion_1: -868812350
-      Tiles-Lv1_Agua x16 Animacion_10: -1963041273
-      Tiles-Lv1_Agua x16 Animacion_11: 1939577818
-      Tiles-Lv1_Agua x16 Animacion_12: 1289824425
-      Tiles-Lv1_Agua x16 Animacion_13: -1880746910
-      Tiles-Lv1_Agua x16 Animacion_14: -726122851
-      Tiles-Lv1_Agua x16 Animacion_15: 50834890
-      Tiles-Lv1_Agua x16 Animacion_16: 1181672202
-      Tiles-Lv1_Agua x16 Animacion_2: -50817958
-      Tiles-Lv1_Agua x16 Animacion_3: 686053047
-      Tiles-Lv1_Agua x16 Animacion_4: 599047536
-      Tiles-Lv1_Agua x16 Animacion_5: -976641368
-      Tiles-Lv1_Agua x16 Animacion_6: -1263465179
-      Tiles-Lv1_Agua x16 Animacion_7: 550419141
-      Tiles-Lv1_Agua x16 Animacion_8: 52680587
-      Tiles-Lv1_Agua x16 Animacion_9: -1053341243
+      Tiles-Lv1_AguaMedia x16 Animacion_0: 848283469
+      Tiles-Lv1_AguaMedia x16 Animacion_1: 1296494147
+      Tiles-Lv1_AguaMedia x16 Animacion_10: -1533765842
+      Tiles-Lv1_AguaMedia x16 Animacion_11: -1429783055
+      Tiles-Lv1_AguaMedia x16 Animacion_12: -329585268
+      Tiles-Lv1_AguaMedia x16 Animacion_13: -789854802
+      Tiles-Lv1_AguaMedia x16 Animacion_14: 156931507
+      Tiles-Lv1_AguaMedia x16 Animacion_15: 1209096879
+      Tiles-Lv1_AguaMedia x16 Animacion_16: 141352678
+      Tiles-Lv1_AguaMedia x16 Animacion_2: -1600648564
+      Tiles-Lv1_AguaMedia x16 Animacion_3: -1276167904
+      Tiles-Lv1_AguaMedia x16 Animacion_4: -1291781518
+      Tiles-Lv1_AguaMedia x16 Animacion_5: -235513079
+      Tiles-Lv1_AguaMedia x16 Animacion_6: 1897043899
+      Tiles-Lv1_AguaMedia x16 Animacion_7: 936054333
+      Tiles-Lv1_AguaMedia x16 Animacion_8: -127263886
+      Tiles-Lv1_AguaMedia x16 Animacion_9: -539629371
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
