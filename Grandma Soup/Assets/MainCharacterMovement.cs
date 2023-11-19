@@ -23,6 +23,10 @@ public class MainCharacterMovement : MonoBehaviour
         {
             rb.velocity = new Vector3(0, 5, 0);
         }
+    }
+    void FixedUpdate()
+    {
+        
         if (Input.GetKey("d"))
         {
             rb.velocity = new Vector3(+2.5f, this.rb.velocity.y, 0);
