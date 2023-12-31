@@ -1,16 +1,17 @@
 using Patterns.ObjectPool.Interfaces;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 namespace Patterns.ObjectPool.Components
 {
-    public class SnowFlake : MonoBehaviour, IPooleableObject
+    public class AcidDrop : MonoBehaviour, IPooleableObject
     {
-        [HideInInspector] public float speed = 1f;
-        public IObjectPool pool;
+        public float speed = 1f;
 
+        public IObjectPool pool;
         private void Update()
         {
-            if (transform.position.y < 0 || Physics.CheckSphere(transform.position, 0.25f,
+            if (transform.position.y < -15 || Physics.CheckSphere(transform.position, 0.25f,
                     LayerMask.GetMask("Default"), QueryTriggerInteraction.Ignore))
             {
                 pool?.Release(this);
@@ -20,6 +21,7 @@ namespace Patterns.ObjectPool.Components
         private void FixedUpdate()
         {
             transform.position += Vector3.down * (speed * Time.fixedDeltaTime);
+            transform.position += Vector3.left * (speed / 2 * Time.fixedDeltaTime);
         }
 
         public bool Active
@@ -44,7 +46,7 @@ namespace Patterns.ObjectPool.Components
         public IPooleableObject Clone()
         {
             GameObject newObject = Instantiate(gameObject);
-            SnowFlake snowFlake = newObject.GetComponent<SnowFlake>();
+            AcidDrop snowFlake = newObject.GetComponent<AcidDrop>();
             return snowFlake;
         }
     }

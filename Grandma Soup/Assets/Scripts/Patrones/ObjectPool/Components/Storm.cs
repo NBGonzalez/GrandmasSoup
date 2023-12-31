@@ -19,12 +19,8 @@ namespace Patterns.ObjectPool.Components
         private float _lastSnowFlake;
         private ObjectPool _snowFlakesPool;
 
-        private AudioSource _audioSource;
 
-        private void Awake()
-        {
-            _audioSource = GetComponent<AudioSource>();
-        }
+
 
         private void Start()
         {
@@ -37,10 +33,6 @@ namespace Patterns.ObjectPool.Components
         {
             if (snowing)
             {
-                if (!_audioSource.isPlaying)
-                {
-                    _audioSource.Play();
-                }
 
 
                 _lastSnowFlake += Time.deltaTime;
@@ -48,29 +40,22 @@ namespace Patterns.ObjectPool.Components
                 {
                     for (int i = 0; i < snowFlakesPerSecond; i++)
                     {
-                        SnowFlake snowFlake = CreateSnowFlake();
+                        AcidDrop snowFlake = CreateSnowFlake();
                     }
-                }
-            }
-            else
-            {
-                if (_audioSource.isPlaying)
-                {
-                    _audioSource.Stop();
                 }
             }
         }
 
-        private SnowFlake CreateSnowFlake()
+        private AcidDrop CreateSnowFlake()
         {
-            SnowFlake snowFlake = (SnowFlake)_snowFlakesPool.Get();
+            AcidDrop snowFlake = (AcidDrop)_snowFlakesPool.Get();
 
             if (snowFlake)
             {
                 snowFlake.pool = _snowFlakesPool;
                 float xDisp = Random.value * spreadAreaExtent - _halfSpreadAreaExtent;
-                float zDisp = Random.value * spreadAreaExtent - _halfSpreadAreaExtent;
-                snowFlake.transform.localPosition = Vector3.zero + Vector3.right * xDisp + Vector3.forward * zDisp;
+                //float zDisp = Random.value * spreadAreaExtent - _halfSpreadAreaExtent;
+                snowFlake.transform.localPosition = Vector3.zero + Vector3.right * xDisp + Vector3.forward;// * zDisp;
                 snowFlake.speed = 1 + (Random.value * (maxSnowFlakeSpeed - 1));
                 snowFlake.transform.SetParent(transform, false);
             }
