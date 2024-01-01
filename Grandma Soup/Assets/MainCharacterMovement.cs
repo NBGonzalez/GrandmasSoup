@@ -8,6 +8,7 @@ public class MainCharacterMovement : MonoBehaviour
 {
 
     Rigidbody2D rb;
+    int vidas = 2;
 
     // Start is called before the first frame update
     void Start()
