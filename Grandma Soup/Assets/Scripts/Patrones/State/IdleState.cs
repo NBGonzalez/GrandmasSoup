@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class IdleState : PlayerBaseState
 {
@@ -15,7 +16,7 @@ public class IdleState : PlayerBaseState
         {
             player.SwitchState(player.jumpingState);
         }
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             player.SwitchState(player.movingState);
         }
