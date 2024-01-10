@@ -23,9 +23,9 @@ public class PlayerStateManager : MonoBehaviour
         currentState.EnterState(this);
     }
 
-    void OnCollisionEnter(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        //currentState.OnCollisionEnter(this);
+        currentState.OnCollisionEnter2D(this, collision);
     }
 
     // Update is called once per frame

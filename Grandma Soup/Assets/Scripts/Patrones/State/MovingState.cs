@@ -33,7 +33,7 @@ public class MovingState : PlayerBaseState
             player.SwitchState(player.idleState);
         }
     }
-    public override void OnCollisionState(PlayerStateManager player)
+    public override void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision)
     {
 
     }
