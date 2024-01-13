@@ -11,14 +11,9 @@ public class PlayerStateManager : MonoBehaviour
     public MovingState movingState = new MovingState();
     public IdleState idleState = new IdleState();
 
-    //private CharacterController characterController;
-    //private int speed = 5;
-
     // Start is called before the first frame update
     void Start()
     {
-        //characterController= GetComponent<CharacterController>();
-
         currentState = idleState;
         currentState.EnterState(this);
     }
