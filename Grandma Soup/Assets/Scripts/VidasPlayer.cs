@@ -1,4 +1,4 @@
-using Patterns.Observer.BadImplementation;
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,13 +18,14 @@ public class VidasPlayer : MonoBehaviour
         if (inmortal == false)
         {
             vidas -= damage;
+            if (vidas <= 0)
+            {
+                SceneManager.LoadScene("MenuInicial");
+            }
             uiManager.UpdateHealth(vidas);
             inmortal = true;
         }
-        if (vidas == 0)
-        {
-            SceneManager.LoadScene("MenuInicial");
-        }
+        
         StartCoroutine(Invulnerable());
     }
     IEnumerator Invulnerable()

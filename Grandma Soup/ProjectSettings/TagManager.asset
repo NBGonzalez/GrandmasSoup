@@ -8,6 +8,7 @@ TagManager:
   - Suelo
   - Pincho
   - AguaAcida
+  - Puerta
   layers:
   - Default
   - TransparentFX
