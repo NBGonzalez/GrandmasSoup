@@ -28,6 +28,13 @@ public class UIManager : MonoBehaviour
     {
         vidas[health].SetActive(false);
     }
+    public void RestablecerVidasUI(int health)
+    {
+        for(int i = 0; i < health; i++)
+        {
+            vidas[i].SetActive(true);
+        }
+    }
     // Lógica de Menús
     public void PausarJuego()
     {
@@ -49,6 +56,7 @@ public class UIManager : MonoBehaviour
     public void Salir()
     {
         SceneManager.LoadScene("MenuInicial");
+        ControladorVidas.Instance.RestablecerVidas();
     }
 
 }

@@ -16,7 +16,7 @@ public class Pinchos : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            ControladorVidas.Instance.RestarVidas();
+            ControladorVidas.Instance.RestarVidas(scriptableObjectPinchos.damage);
         }
     }
 }

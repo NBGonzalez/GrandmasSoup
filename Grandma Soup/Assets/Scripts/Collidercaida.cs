@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Collidercaida : MonoBehaviour
 {
+    public int daño = 99;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.GetComponent<VidasPlayer>().QuitarVidas(3);
-            Debug.Log(collision.GetComponent<VidasPlayer>().vidas);
+            ControladorVidas.Instance.RestarVidas(daño);
         }
     }
 }

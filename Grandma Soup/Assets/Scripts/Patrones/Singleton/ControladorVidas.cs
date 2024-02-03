@@ -10,7 +10,7 @@ public class ControladorVidas : MonoBehaviour
     [SerializeField] private int vidas = 3;
     [SerializeField] private UIManager uiManager;
 
-    private void Awake()
+    private void Start()
     {
         if(ControladorVidas.Instance == null)
         {
@@ -25,20 +25,34 @@ public class ControladorVidas : MonoBehaviour
         }
         uiManager = FindAnyObjectByType<UIManager>();
     }
-    public void SumarVidas()
+    private void Update()
     {
-        vidas++;
+        if(uiManager == null)
+        {
+            uiManager= FindAnyObjectByType<UIManager>();
+        }
+    }
+    public void SumarVidas(int vida)
+    {
+        vidas += vida ;
         uiManager.SumarVidasUI(vidas-1);
+
         Debug.Log("vidas: " + vidas);
     }
-    public void RestarVidas()
+    public void RestarVidas(int daño)
     {
-        vidas--;
+        vidas -= daño;
         if (vidas <= 0)
         {
+            RestablecerVidas();
             SceneManager.LoadScene("MenuInicial");
         }
         uiManager.RestarVidasUI(vidas);
         Debug.Log("vidas: " + vidas);
+    }
+    public void RestablecerVidas()
+    {
+        vidas = 3;
+        uiManager.RestablecerVidasUI(vidas);
     }
 }
