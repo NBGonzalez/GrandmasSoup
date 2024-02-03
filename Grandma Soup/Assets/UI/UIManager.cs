@@ -6,19 +6,29 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
+{
+
+    public GameObject[] vidas;
+    public GameObject menuPausa;
+    private bool isPaused = false;
+
+    private void Update()
     {
-        public GameObject[] vidas;
-        public GameObject menuPausa;
-        private bool isPaused = false;
-
-        private void Update()
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(Input.GetKeyDown(KeyCode.Escape))
-            {
-                PausarJuego();
-            }
+            PausarJuego();
         }
-
+    }
+    // Lógica de vidas en la UI
+    public void SumarVidasUI(int health)
+    {
+        vidas[health].SetActive(true);
+    }
+    public void RestarVidasUI(int health)
+    {
+        vidas[health].SetActive(false);
+    }
+    // Lógica de Menús
     public void PausarJuego()
     {
         if (isPaused == false)
@@ -31,11 +41,6 @@ public class UIManager : MonoBehaviour
             menuPausa.SetActive(false);
             isPaused = false;
         }
-    }
-
-    public void UpdateHealth(int health)
-    {
-        vidas[health].SetActive(false);
     }
     public void Reanudar()
     {

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class VidasPlayer : MonoBehaviour
 {
+
     public int vidas = 3;
     public bool inmortal = false;
     public UIManager uiManager;
@@ -22,7 +23,7 @@ public class VidasPlayer : MonoBehaviour
             {
                 SceneManager.LoadScene("MenuInicial");
             }
-            uiManager.UpdateHealth(vidas);
+            uiManager.RestarVidasUI(vidas);
             inmortal = true;
         }
         

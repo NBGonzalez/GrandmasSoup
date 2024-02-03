@@ -28,7 +28,7 @@ public class PuertaCollider : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.E))
         {
-            SceneManager.LoadScene("MenuInicial");
+            SceneManager.LoadScene("Nivel2");
         }
     }
 }

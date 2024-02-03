@@ -12,12 +12,11 @@ public class Pinchos : MonoBehaviour
         this.transform.localScale = scriptableObjectPinchos.size;
         position = transform.localPosition;
     }
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            collision.GetComponent<VidasPlayer>().QuitarVidas(scriptableObjectPinchos.damage);
-            Debug.Log(collision.GetComponent<VidasPlayer>().vidas);
+            ControladorVidas.Instance.RestarVidas();
         }
     }
 }
