@@ -1,78 +1,46 @@
+using System.Collections;
 using System.Collections.Generic;
-using Patterns.ObjectPool.Interfaces;
-using UnityEngine.Pool;
+using UnityEngine;
 
-namespace Patterns.ObjectPool
+public class ObjectPool : MonoBehaviour
 {
-    public class ObjectPool : IObjectPool
+    public static ObjectPool instance;
+
+    private List<GameObject> pooledObjects = new List<GameObject>();
+    private int amountToPool;
+
+    [SerializeField] private GameObject waterDropPrefab;
+
+    private void Awake()
     {
-        private IPooleableObject _objectPrototype;
-        private readonly bool _allowAddNew;
+        amountToPool = 1000;
 
-        private List<IPooleableObject> _objects;
-
-        private int _activeObjects;
-
-        public ObjectPool(IPooleableObject objectPrototype, int initialNumberOfElements, bool allowAddNew)
+        if(instance == null)
         {
-            _objectPrototype = objectPrototype;
-            _allowAddNew = allowAddNew;
-            _objects = new List<IPooleableObject>(initialNumberOfElements);
-            _activeObjects = 0;
+            instance = this;
+        }
+        
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        for (int i = 0; i < amountToPool; i++)
+        {
+            GameObject obj = Instantiate(waterDropPrefab);
+            obj.SetActive(false);
+            pooledObjects.Add(obj);
+        }
+    }
 
-            for (int i = 0; i < initialNumberOfElements; i++)
+    public GameObject GetPooledObject()
+    {
+        for(int i = 0; i < pooledObjects.Count; i++)
+        {
+            if (!pooledObjects[i].activeInHierarchy)
             {
-                _objects.Add(CreateObject());
+                return pooledObjects[i];
             }
         }
-
-
-        public IPooleableObject Get()
-        {
-            for (int i = 0; i < _objects.Count; i++)
-            {
-                if (!_objects[i].Active)
-                {
-                    _objects[i].Active = true;
-                    _activeObjects += 1;
-                    return _objects[i];
-                }
-            }
-
-            if (_allowAddNew)
-            {
-                IPooleableObject newObj = CreateObject();
-                newObj.Active = true;
-                _objects.Add(newObj);
-
-                _activeObjects += 1;
-                return newObj;
-            }
-
-            return null;
-        }
-
-        public void Release(IPooleableObject obj)
-        {
-            obj.Active = false;
-            _activeObjects -= 1;
-            obj.Reset();
-        }
-
-        private IPooleableObject CreateObject()
-        {
-            IPooleableObject newObj = _objectPrototype.Clone();
-            return newObj;
-        }
-
-        public int GetCount()
-        {
-            return _objects.Count;
-        }
-
-        public int GetActive()
-        {
-            return _activeObjects;
-        }
+        return null;
     }
 }
