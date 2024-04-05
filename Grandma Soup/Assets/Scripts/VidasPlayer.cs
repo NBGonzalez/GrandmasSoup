@@ -13,6 +13,7 @@ public class VidasPlayer : MonoBehaviour
     private void Awake()
     {
         vidas = 3;
+        uiManager = FindAnyObjectByType<UIManager>();
     }
     public void QuitarVidas(int damage)
     {

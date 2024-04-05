@@ -13,7 +13,7 @@ public class ObjectPool : MonoBehaviour
 
     private void Awake()
     {
-        amountToPool = 1000;
+        amountToPool = 1300;
 
         if(instance == null)
         {
