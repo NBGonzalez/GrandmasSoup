@@ -14,7 +14,7 @@ public class acid : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        downSpeed = Random.Range(2, 4);
+        downSpeed = Random.Range(2, 5);
         lateralSpeed= Random.Range(1, 2);
 
         pointOfReset = -10;

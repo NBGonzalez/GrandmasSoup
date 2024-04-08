@@ -35,6 +35,24 @@ public class UIManager : MonoBehaviour
             vidas[i].SetActive(true);
         }
     }
+    public void ActualizarVidasUI(int health)
+    {
+        if (health <= 3)
+        {
+            for (int i = health; i < 4; i++)
+            {
+                vidas[i].SetActive(false);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < health + 1; i++)
+            {
+                vidas[i].SetActive(true);
+            }
+        }
+        
+    }
     // Lógica de Menús
     public void PausarJuego()
     {

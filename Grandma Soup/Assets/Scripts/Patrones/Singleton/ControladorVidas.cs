@@ -32,6 +32,7 @@ public class ControladorVidas : MonoBehaviour
             uiManager= FindAnyObjectByType<UIManager>();
             uiManager.RestablecerVidasUI(vidas);
         }
+        ActualizarVidas();
     }
     public void SumarVidas(int vida)
     {
@@ -55,6 +56,10 @@ public class ControladorVidas : MonoBehaviour
     {
         vidas = 3;
         uiManager.RestablecerVidasUI(vidas);
+    }
+    public void ActualizarVidas()
+    {
+        uiManager.ActualizarVidasUI(vidas);
     }
 
 }
