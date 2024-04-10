@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ControladorVidas : MonoBehaviour
 {
     public static ControladorVidas Instance;
-
+    public const int MAX_VIDAS = 4;
     [SerializeField] private int vidas = 3;
     [SerializeField] private UIManager uiManager;
 
@@ -36,7 +36,7 @@ public class ControladorVidas : MonoBehaviour
     }
     public void SumarVidas(int vida)
     {
-        vidas += vida ;
+        if(vidas <= MAX_VIDAS) { vidas += vida; }
         uiManager.SumarVidasUI(vidas-1);
 
         Debug.Log("vidas: " + vidas);
@@ -59,7 +59,6 @@ public class ControladorVidas : MonoBehaviour
     }
     public void ActualizarVidas()
     {
-        uiManager.ActualizarVidasUI(vidas);
+        //uiManager.ActualizarVidasUI(vidas);
     }
-
 }

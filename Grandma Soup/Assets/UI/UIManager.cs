@@ -7,10 +7,25 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-
+    public static UIManager Instance;
     public GameObject[] vidas;
     public GameObject menuPausa;
     private bool isPaused = false;
+
+    private void Start()
+    {
+        if (UIManager.Instance == null)
+        {
+            UIManager.Instance = this;
+            Debug.Log("Singleton UIManager [CREADO]");
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Debug.Log("Singleton UIManager [DESTRUIDO]");
+            Destroy(gameObject);
+        }
+    }
 
     private void Update()
     {
