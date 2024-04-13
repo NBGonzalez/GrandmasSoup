@@ -10,10 +10,12 @@ public class IdleState : PlayerBaseState
         Debug.Log("Idle State");
     }
 
-    public override void UpdateState(PlayerStateManager player)
+    public override void UpdateState(PlayerStateManager player, Animator anim)
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
+            anim.SetBool("isJumping", true);
+            anim.SetBool("isJumping", false);
             player.SwitchState(player.jumpingState);
         }
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
@@ -22,7 +24,7 @@ public class IdleState : PlayerBaseState
         }
     }
 
-    public override void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision)
+    public override void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision, Animator anim)
     {
 
     }

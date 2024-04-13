@@ -6,8 +6,8 @@ public abstract class PlayerBaseState
 {
     public abstract void EnterState(PlayerStateManager player);
 
-    public abstract void UpdateState(PlayerStateManager player);
+    public abstract void UpdateState(PlayerStateManager player, Animator anim);
 
-    public abstract void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision);
+    public abstract void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision, Animator anim);
 
 }

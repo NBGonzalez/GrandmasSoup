@@ -13,8 +13,9 @@ public class JumpingState : PlayerBaseState
         //GameObject other2 = GameObject.FindGameObjectWithTag("Suelo");
     }
 
-    public override void UpdateState(PlayerStateManager player)
+    public override void UpdateState(PlayerStateManager player, Animator anim)
     {
+        anim.SetBool("isJumping", true);
         if (Input.GetKey("d"))
         {
             rb.velocity = new Vector3(+2.5f, this.rb.velocity.y, 0);
@@ -25,11 +26,12 @@ public class JumpingState : PlayerBaseState
         }
     }
 
-    public override void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision)
+    public override void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision, Animator anim)
     {
         GameObject other = collision.gameObject;
         if (other.CompareTag("Suelo"))
         {
+            anim.SetBool("isJumping", false);
             player.SwitchState(player.idleState);
         }
     }

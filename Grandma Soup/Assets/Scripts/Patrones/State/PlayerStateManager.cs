@@ -11,22 +11,25 @@ public class PlayerStateManager : MonoBehaviour
     public MovingState movingState = new MovingState();
     public IdleState idleState = new IdleState();
 
+    Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         currentState = idleState;
         currentState.EnterState(this);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        currentState.OnCollisionEnter2D(this, collision);
+        currentState.OnCollisionEnter2D(this, collision, anim);
     }
 
     // Update is called once per frame
     void Update()
     {
-        currentState.UpdateState(this);
+        currentState.UpdateState(this, anim);
     }
 
     public void SwitchState(PlayerBaseState newState)
