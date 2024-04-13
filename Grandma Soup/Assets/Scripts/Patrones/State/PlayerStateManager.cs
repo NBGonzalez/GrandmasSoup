@@ -5,18 +5,23 @@ using UnityEngine;
 
 public class PlayerStateManager : MonoBehaviour
 {
-
     PlayerBaseState currentState;
     public JumpingState jumpingState = new JumpingState();
     public MovingState movingState = new MovingState();
     public IdleState idleState = new IdleState();
+    public GettingDamageState gettingDamageState = new GettingDamageState();
+
+    public bool gettingDamage = false;
 
     Animator anim;
+    Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+
         currentState = idleState;
         currentState.EnterState(this);
     }
@@ -29,7 +34,16 @@ public class PlayerStateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentState.UpdateState(this, anim);
+        if (gettingDamage) 
+        {
+            gettingDamage = false;
+            currentState = gettingDamageState;
+            currentState.EnterState(this);
+        } 
+        else 
+        { 
+            currentState.UpdateState(this, anim); 
+        }
     }
 
     public void SwitchState(PlayerBaseState newState)

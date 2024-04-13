@@ -12,10 +12,9 @@ public class IdleState : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player, Animator anim)
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        anim.SetBool("isWalking", false);
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            anim.SetBool("isJumping", true);
-            anim.SetBool("isJumping", false);
             player.SwitchState(player.jumpingState);
         }
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))

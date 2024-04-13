@@ -35,8 +35,8 @@ public class MovingState : PlayerBaseState
         }
         else
         {
-            player.SwitchState(player.idleState);
             anim.SetBool("isWalking", false);
+            player.SwitchState(player.idleState);
         }
     }
     public override void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision, Animator anim)
