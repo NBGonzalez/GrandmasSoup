@@ -5,13 +5,14 @@ using UnityEngine.UIElements;
 
 public class IdleState : PlayerBaseState
 {
-    public override void EnterState(PlayerStateManager player)
+    public override void EnterState(PlayerStateManager player, Animator anim)
     {
         Debug.Log("Idle State");
     }
 
     public override void UpdateState(PlayerStateManager player, Animator anim)
     {
+        anim.SetBool("isJumping", false);
         anim.SetBool("isWalking", false);
         if (Input.GetKeyDown(KeyCode.Space))
         {

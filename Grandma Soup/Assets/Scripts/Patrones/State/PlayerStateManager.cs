@@ -23,7 +23,7 @@ public class PlayerStateManager : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         currentState = idleState;
-        currentState.EnterState(this);
+        currentState.EnterState(this, anim);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -38,7 +38,7 @@ public class PlayerStateManager : MonoBehaviour
         {
             gettingDamage = false;
             currentState = gettingDamageState;
-            currentState.EnterState(this);
+            currentState.EnterState(this, anim);
         } 
         else 
         { 
@@ -49,6 +49,18 @@ public class PlayerStateManager : MonoBehaviour
     public void SwitchState(PlayerBaseState newState)
     {
         currentState = newState;
-        newState.EnterState(this);
+        newState.EnterState(this, anim);
+    }
+
+    //Esto pertenece a GettingDamageState, pero al heredar a PlayerBaseState y no a Monobehaviour no
+    //me deja empezar corrutinas.
+    public IEnumerator GettingStunned(PlayerStateManager player)
+    {
+        Debug.Log("Acabo de ser estuneado");
+        yield return new WaitForSeconds(1);
+        Debug.Log("Ya no estoy estuneado");
+        player.gettingDamage = false;
+        anim.SetBool("isDamaging", false);
+        player.SwitchState(player.idleState);
     }
 }

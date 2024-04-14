@@ -8,7 +8,7 @@ public class MovingState : PlayerBaseState
 {
     Rigidbody2D rb;
 
-    public override void EnterState(PlayerStateManager player)
+    public override void EnterState(PlayerStateManager player, Animator anim)
     {
         Debug.Log("Moving State");
         rb = player.GetComponent<Rigidbody2D>();

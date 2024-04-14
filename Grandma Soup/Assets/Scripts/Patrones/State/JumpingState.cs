@@ -5,7 +5,7 @@ using UnityEngine;
 public class JumpingState : PlayerBaseState
 {
     Rigidbody2D rb;
-    public override void EnterState(PlayerStateManager player)
+    public override void EnterState(PlayerStateManager player, Animator anim)
     {
         Debug.Log("Jumping State");
         rb = player.GetComponent<Rigidbody2D>();
@@ -19,17 +19,18 @@ public class JumpingState : PlayerBaseState
         if (Input.GetKey("d"))
         {
             rb.velocity = new Vector3(+2.5f, this.rb.velocity.y, 0);
+            player.GetComponent<SpriteRenderer>().flipX = false;
         }
         else if (Input.GetKey("a"))
         {
             rb.velocity = new Vector3(-2.5f, this.rb.velocity.y, 0);
+            player.GetComponent<SpriteRenderer>().flipX = true;
         }
     }
 
     public override void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision, Animator anim)
     {
-        GameObject other = collision.gameObject;
-        if (other.CompareTag("Suelo"))
+        if (collision.gameObject.CompareTag("Suelo"))
         {
             anim.SetBool("isJumping", false);
             player.SwitchState(player.idleState);
