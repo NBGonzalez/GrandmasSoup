@@ -5,11 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class ControladorVidas : MonoBehaviour
 {
+    // Singleton variables
     public static ControladorVidas Instance;
-    public const int MAX_VIDAS = 4;
+    public const int MAX_VIDAS = 6;
     [SerializeField] private int vidas = 3;
     [SerializeField] private UIManager uiManager;
 
+    // Prototype variables
+    public GameObject[] _spawnDeVidas;
+    private int numberOfPrototypes = 3;
+    private AVida[] _vida;
+
+    //
+    // Prototype
+    //
+    private void Awake()
+    {
+        _vida = new AVida[numberOfPrototypes];
+        for(int i = 0; i < numberOfPrototypes; i++)
+        {
+            //_vida[i].Clone<AVida>(_spawnDeVidas[i].transform.position);
+        }
+    }
+    //
+    // Singleton
+    //
     private void Start()
     {
         if(ControladorVidas.Instance == null)

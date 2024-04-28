@@ -41,6 +41,10 @@ public class MovingState : PlayerBaseState
     }
     public override void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision, Animator anim)
     {
-
+        if (collision.gameObject.CompareTag("Suelo"))
+        {
+            anim.SetBool("isJumping", false);
+            //player.SwitchState(player.idleState);
+        }
     }
 }

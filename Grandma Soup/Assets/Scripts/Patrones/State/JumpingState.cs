@@ -11,21 +11,18 @@ public class JumpingState : PlayerBaseState
         rb = player.GetComponent<Rigidbody2D>();
         rb.AddForce(new Vector2(0, 7), ForceMode2D.Impulse);
         //GameObject other2 = GameObject.FindGameObjectWithTag("Suelo");
+        anim.SetBool("isJumping", true);
     }
 
     public override void UpdateState(PlayerStateManager player, Animator anim)
     {
-        anim.SetBool("isJumping", true);
-        if (Input.GetKey("d"))
+        
+
+        if(Input.GetKey("d") || Input.GetKey("a"))
         {
-            rb.velocity = new Vector3(+2.5f, this.rb.velocity.y, 0);
-            player.GetComponent<SpriteRenderer>().flipX = false;
+            player.SwitchState(player.idleState);
         }
-        else if (Input.GetKey("a"))
-        {
-            rb.velocity = new Vector3(-2.5f, this.rb.velocity.y, 0);
-            player.GetComponent<SpriteRenderer>().flipX = true;
-        }
+
     }
 
     public override void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision, Animator anim)

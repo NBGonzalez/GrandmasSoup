@@ -19,7 +19,7 @@ public class acidRain : MonoBehaviour
         if (acido != null)
         {
             randomNumber = Random.Range(-20, 150);
-            vec = new Vector3(randomNumber, 13, 0);
+            vec = new Vector3(randomNumber, 30, 0);
             acido.transform.position = vec;
             acido.SetActive(true);
         }

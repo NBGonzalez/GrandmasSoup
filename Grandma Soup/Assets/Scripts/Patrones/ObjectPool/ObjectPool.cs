@@ -22,7 +22,7 @@ public class ObjectPool : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        amountToPool = 1300;
+        amountToPool = 2000;
         for (int i = 0; i < amountToPool; i++)
         {
             GameObject obj = Instantiate(waterDropPrefab);

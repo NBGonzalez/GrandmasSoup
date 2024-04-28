@@ -33,7 +33,11 @@ public class UIManager : MonoBehaviour
             PausarJuego();
         }
     }
-    // Lógica de vidas en la UI
+
+    /// 
+    /// Lógica de vidas en la UI
+    /// 
+
     public void SumarVidasUI(int health)
     {
         vidas[health].SetActive(true);
@@ -67,7 +71,9 @@ public class UIManager : MonoBehaviour
         }
         
     }
-    // Lógica de Menús
+    /// 
+    /// Lógica de Menús
+    /// 
     public void PausarJuego()
     {
         if (isPaused == false)

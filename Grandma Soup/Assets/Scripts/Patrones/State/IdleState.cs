@@ -12,7 +12,7 @@ public class IdleState : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player, Animator anim)
     {
-        anim.SetBool("isJumping", false);
+        //anim.SetBool("isJumping", false);
         anim.SetBool("isWalking", false);
         if (Input.GetKeyDown(KeyCode.Space))
         {
