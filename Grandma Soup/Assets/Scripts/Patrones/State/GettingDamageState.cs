@@ -19,9 +19,4 @@ public class GettingDamageState : PlayerBaseState
     {
 
     }
-
-    public override void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision, Animator anim)
-    {
-        
-    }
 }

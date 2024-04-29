@@ -16,7 +16,7 @@ public class MovingState : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player, Animator anim)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !anim.GetBool("isJumping"))
         {
             anim.SetBool("isWalking", false);
             player.SwitchState(player.jumpingState);
@@ -37,14 +37,6 @@ public class MovingState : PlayerBaseState
         {
             anim.SetBool("isWalking", false);
             player.SwitchState(player.idleState);
-        }
-    }
-    public override void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision, Animator anim)
-    {
-        if (collision.gameObject.CompareTag("Suelo"))
-        {
-            anim.SetBool("isJumping", false);
-            //player.SwitchState(player.idleState);
         }
     }
 }

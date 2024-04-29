@@ -11,22 +11,7 @@ public class ControladorVidas : MonoBehaviour
     [SerializeField] private int vidas = 3;
     [SerializeField] private UIManager uiManager;
 
-    // Prototype variables
-    public GameObject[] _spawnDeVidas;
-    private int numberOfPrototypes = 3;
-    private AVida[] _vida;
 
-    //
-    // Prototype
-    //
-    private void Awake()
-    {
-        _vida = new AVida[numberOfPrototypes];
-        for(int i = 0; i < numberOfPrototypes; i++)
-        {
-            //_vida[i].Clone<AVida>(_spawnDeVidas[i].transform.position);
-        }
-    }
     //
     // Singleton
     //

@@ -10,7 +10,6 @@ public class JumpingState : PlayerBaseState
         Debug.Log("Jumping State");
         rb = player.GetComponent<Rigidbody2D>();
         rb.AddForce(new Vector2(0, 7), ForceMode2D.Impulse);
-        //GameObject other2 = GameObject.FindGameObjectWithTag("Suelo");
         anim.SetBool("isJumping", true);
     }
 
@@ -23,14 +22,5 @@ public class JumpingState : PlayerBaseState
             player.SwitchState(player.idleState);
         }
 
-    }
-
-    public override void OnCollisionEnter2D(PlayerStateManager player, Collision2D collision, Animator anim)
-    {
-        if (collision.gameObject.CompareTag("Suelo"))
-        {
-            anim.SetBool("isJumping", false);
-            player.SwitchState(player.idleState);
-        }
     }
 }
