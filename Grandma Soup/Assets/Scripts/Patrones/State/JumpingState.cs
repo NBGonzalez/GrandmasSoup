@@ -21,6 +21,10 @@ public class JumpingState : PlayerBaseState
         {
             player.SwitchState(player.idleState);
         }
+        if (!anim.GetBool("isJumping"))
+        {
+            player.SwitchState(player.idleState);
+        }
 
     }
 }
