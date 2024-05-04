@@ -12,6 +12,7 @@ public class MovingState : PlayerBaseState
     {
         Debug.Log("Moving State");
         rb = player.GetComponent<Rigidbody2D>();
+
     }
 
     public override void UpdateState(PlayerStateManager player, Animator anim)

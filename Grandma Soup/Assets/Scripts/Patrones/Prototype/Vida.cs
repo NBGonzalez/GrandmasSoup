@@ -14,12 +14,10 @@ public class Vida : MonoBehaviour, IPrototype, IVida
         foreach(Transform spawn in respawns.transform)
         {
             _respawnsVida.Add(spawn);
-            print(_respawnsVida.Count);
         }
     }
     public IVida Clonar()
     {
-        print(_respawnsVida.Count);
         GameObject miVida = Instantiate(gameObject, _respawnsVida[i].position, _respawnsVida[i].rotation);
         Vida newVida= miVida.GetComponent<Vida>();
         i++;

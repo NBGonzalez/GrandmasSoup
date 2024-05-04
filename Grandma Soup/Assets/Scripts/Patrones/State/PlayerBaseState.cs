@@ -12,7 +12,7 @@ public abstract class PlayerBaseState
     {
         if (collision.gameObject.CompareTag("Suelo"))
         {
-            anim.SetBool("isJumping", false);
+            player.GetComponent<Animator>().SetBool("isJumping", false);
         }
     }
 
