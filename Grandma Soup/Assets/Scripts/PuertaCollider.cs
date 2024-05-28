@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+//using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,6 +9,13 @@ using UnityEngine.UI;
 public class PuertaCollider : MonoBehaviour
 {
     public GameObject texto;
+    public int indice;
+    private void Start()
+    {
+        texto = GameObject.FindGameObjectWithTag("UI").transform.GetChild(6).gameObject;
+        texto.SetActive(false);
+        Debug.Log(texto.name);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -28,7 +36,9 @@ public class PuertaCollider : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.E))
         {
-            SceneManager.LoadScene("Nivel2");
+            indice = SceneManager.GetActiveScene().buildIndex;
+            indice++;
+            SceneManager.LoadScene(indice);
         }
     }
 }
