@@ -4165,7 +4165,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "N\xC9STOR BERMEJILLO GONZ\xC1LEZ\r\n\nSERGIO JES\xDAS GONZ\xC1LEZ CASTILLA\r\n\nPABLO
-    PRIOR MOLINA\r\n\nALEJANDRO TOB\xCDAS M\xC1RQUEZ"
+    PRIOR MOLINA\r\n\nALEJANDRO TOB\xCDAS M\xC1RQUEZ\n\nFONDOS DE INTERFACES SACADOS
+    DE PINTEREST Y ARTSTATION"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -4192,7 +4193,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42.6
+  m_fontSize: 33.1
   m_fontSizeBase: 170
   m_fontWeight: 400
   m_enableAutoSizing: 1
